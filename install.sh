@@ -34,15 +34,15 @@ sudo apt install -y ros-dev-tools
 grep -F "source /opt/ros/humble/setup.bash" ~/.bashrc ||
     echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
-echo 'Installation is done!'
-echo 'Try this example to make sure it works.'
-echo ''
-echo 'Run the following commands'
-echo '$ source /opt/ros/humble/setup.bash'
-echo '$ ros2 run demo_nodes_cpp talker'
-echo ''
-echo 'Open another terminal and run'
-echo '$ ros2 run demo_nodes_py listener'
-echo ''
-echo 'You should see `talker` saying `Publishing` messages and `listener` saying `I heard` those messages.'
-echo 'If you can see it, it verifies you have both C++ and Python APIs are working properly.'
+printf "
+Installation is done!
+Try this example to make sure it works.
+
+Open another terminal and run the following commands
+\$ ros2 run demo_nodes_cpp talker
+
+Open another terminal and run
+\$ ros2 run demo_nodes_py listener
+
+You should see talker saying Publishing messages and listener saying I heard those messages.
+If you can see it, it verifies you have both C++ and Python APIs are working properly.\n"
