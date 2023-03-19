@@ -35,8 +35,10 @@ grep -F "source /opt/ros/humble/setup.bash" ~/.bashrc ||
     echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 printf "
+==============================
+
 Installation is done!
-Try this example to make sure it works.
+Let\`s try this example to make sure it works.
 
 Open another terminal and run the following commands
 \$ ros2 run demo_nodes_cpp talker
@@ -44,5 +46,7 @@ Open another terminal and run the following commands
 Open another terminal and run
 \$ ros2 run demo_nodes_py listener
 
-You should see talker saying Publishing messages and listener saying I heard those messages.
-If you can see it, it verifies you have both C++ and Python APIs are working properly.\n"
+You should see \`talker\` saying \`Publishing\` messages and \`listener\` saying \`I heard\` those messages.
+It verifies you have both C++ and Python APIs are working properly.
+
+==============================\n"
