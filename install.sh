@@ -6,7 +6,7 @@
 # Note that only Ubuntu 22.04 (Jammy) is acceptable
 
 # make sure to run only on jammy
-UBUNTU_VER="$(lsb_release -sc)"
+UBUNTU_VER=$(lsb_release -sc)
 [ "$UBUNTU_VER" = "jammy" ] || exit 1
 
 # update packages
@@ -31,7 +31,7 @@ sudo apt upgrade -y
 sudo apt install -y ros-humble-desktop
 sudo apt install -y ros-dev-tools
 
-grep -F "source /opt/ros/humble/setup.bash" ~/.bashrc ||
+grep -qF "source /opt/ros/humble/setup.bash" ~/.bashrc ||
     echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 printf "
