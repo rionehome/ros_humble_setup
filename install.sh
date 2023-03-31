@@ -5,6 +5,9 @@
 # https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 # Note that only Ubuntu 22.04 (Jammy) is acceptable
 
+# exit if error happens
+set -e
+
 # make sure to run only on jammy
 UBUNTU_VER=$(lsb_release -sc)
 [ "$UBUNTU_VER" = "jammy" ] || exit 1

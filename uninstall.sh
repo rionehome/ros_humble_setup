@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# exit if error happens
+set -e
+
 # remove packages
 sudo apt remove -y ros-humble-* && sudo apt autoremove -y
 
